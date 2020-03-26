@@ -21,12 +21,6 @@ lapply(Packages, library, character.only = TRUE)
 
 <br>
 
-# {.tabset .tabset-pills .tabset-fade}
-
-##Background & Analysis
-
-<br>
-
 For this analysis, we were given a dataset from a Kaggle competition. We were tasked to find a model to predict the sales prices of homes. When I first dived into the dataset, I gained understanding of the data by checking out the parirs plot and text description. I began by first making a rather complex model. I soon realized interpretation might be difficult, so I took a step back and removed all of my interaction and quadratic terms to make it easier to interpret. Let's dive into the play by play of the process I went through to develop my model.
 
 <br>
@@ -164,9 +158,6 @@ curve(b[1] +
         col = ColBothOn)
 ```
 
-
-##Model Validation & Interpretation
-
 <br>
 
 ```{r}
@@ -237,7 +228,7 @@ summary(p.lm)
 summary(sf4.lm)
 ```
 
-##Diagonostic Plots
+
 
 ```{r}
 par(mfrow=c(1,3))

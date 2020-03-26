@@ -15,12 +15,6 @@ output:
 
 <br>
 
-# {.tabset .tabset-pills .tabset-fade}
-
-##Background & Analysis
-
-<br>
-
 For this analysis, we were given a dataset from a Kaggle competition. We were tasked to find a model to predict the sales prices of homes. When I first dived into the dataset, I gained understanding of the data by checking out the parirs plot and text description. I began by first making a rather complex model. I soon realized interpretation might be difficult, so I took a step back and removed all of my interaction and quadratic terms to make it easier to interpret. Let's dive into the play by play of the process I went through to develop my model.
 
 <br>
@@ -242,21 +236,21 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7513 -0.4619  0.0799  0.5766  3.1382 
+## -4.7730 -0.4860  0.0971  0.5637  3.1018 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.599e+01  1.219e-01 131.219  < 2e-16 ***
-## TotalSF                 1.285e-03  5.617e-05  22.867  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.074e-04  2.873e-05  14.182  < 2e-16 ***
-## TotalSF:Quality         2.199e-04  4.346e-05   5.058 5.05e-07 ***
-## Quality:NewNeighborhood 2.127e-02  6.890e-03   3.087  0.00208 ** 
+## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
+## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
+## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
+## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.8913 on 976 degrees of freedom
-## Multiple R-squared:  0.8054,	Adjusted R-squared:  0.8046 
-## F-statistic:  1010 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.9048 on 976 degrees of freedom
+## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
+## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -304,9 +298,6 @@ curve(b[1] +
 
 ![](HouseSellingPrices_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
-
-##Model Validation & Interpretation
-
 <br>
 
 
@@ -340,7 +331,7 @@ rsa <- 1 - (n-1)/(n-pt)*SSE/SSTO
 
 | Model   | Adjusted $R^2$ Train Data | Adjusted $R^2$ Test Data |
 |---------|-------|----------------| 
-| Final Model    | 0.8054437  | 0.8055781 |
+| Final Model    | 0.7982108  | 0.8232777 |
 
 <br>
 
@@ -351,9 +342,9 @@ b
 
 ```
 ##             (Intercept)                 TotalSF TotalSF:NeighborhoodNew 
-##            1.599014e+01            1.284548e-03            4.074039e-04 
+##            1.594836e+01            1.314863e-03            4.303953e-04 
 ##         TotalSF:Quality Quality:NewNeighborhood 
-##            2.198515e-04            2.127068e-02
+##            1.717048e-04            2.415739e-02
 ```
 
 <br>
@@ -385,21 +376,21 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7513 -0.4619  0.0799  0.5766  3.1382 
+## -4.7730 -0.4860  0.0971  0.5637  3.1018 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.599e+01  1.219e-01 131.219  < 2e-16 ***
-## TotalSF                 1.285e-03  5.617e-05  22.867  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.074e-04  2.873e-05  14.182  < 2e-16 ***
-## TotalSF:Quality         2.199e-04  4.346e-05   5.058 5.05e-07 ***
-## Quality:NewNeighborhood 2.127e-02  6.890e-03   3.087  0.00208 ** 
+## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
+## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
+## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
+## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.8913 on 976 degrees of freedom
-## Multiple R-squared:  0.8054,	Adjusted R-squared:  0.8046 
-## F-statistic:  1010 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.9048 on 976 degrees of freedom
+## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
+## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -412,17 +403,17 @@ summary(r.lm)
 ##     TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -4.77881 -0.50368  0.01802  0.52201  3.10352 
+## -4.78254 -0.52401  0.03899  0.50553  3.09110 
 ## 
 ## Coefficients:
 ##                         Value    Std. Error t value 
-## (Intercept)              16.0796   0.1082   148.5676
-## TotalSF                   0.0013   0.0000    25.6488
-## TotalSF:NeighborhoodNew   0.0004   0.0000    15.7024
-## TotalSF:Quality           0.0002   0.0000     5.1577
-## Quality:NewNeighborhood   0.0230   0.0061     3.7514
+## (Intercept)              16.0986   0.1127   142.8078
+## TotalSF                   0.0013   0.0001    24.5649
+## TotalSF:NeighborhoodNew   0.0004   0.0000    16.3812
+## TotalSF:Quality           0.0002   0.0000     3.9856
+## Quality:NewNeighborhood   0.0248   0.0062     3.9784
 ## 
-## Residual standard error: 0.7643 on 976 degrees of freedom
+## Residual standard error: 0.7575 on 976 degrees of freedom
 ```
 
 ```r
@@ -448,21 +439,21 @@ summary(p.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7513 -0.4627  0.0796  0.5776  3.1382 
+## -4.7710 -0.4848  0.0983  0.5639  3.1047 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.599e+01  1.219e-01 131.150  < 2e-16 ***
-## TotalSF                 1.284e-03  5.622e-05  22.848  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.075e-04  2.875e-05  14.171  < 2e-16 ***
-## TotalSF:Quality         2.199e-04  4.349e-05   5.056 5.11e-07 ***
-## Quality:NewNeighborhood 2.127e-02  6.893e-03   3.086  0.00209 ** 
+## (Intercept)             1.595e+01  1.273e-01 125.251  < 2e-16 ***
+## TotalSF                 1.315e-03  5.906e-05  22.260  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.303e-04  2.881e-05  14.937  < 2e-16 ***
+## TotalSF:Quality         1.723e-04  4.547e-05   3.790 0.000160 ***
+## Quality:NewNeighborhood 2.396e-02  7.063e-03   3.392 0.000722 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.8917 on 975 degrees of freedom
-## Multiple R-squared:  0.8054,	Adjusted R-squared:  0.8046 
-## F-statistic:  1009 on 4 and 975 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.9052 on 975 degrees of freedom
+## Multiple R-squared:  0.7979,	Adjusted R-squared:  0.797 
+## F-statistic: 962.1 on 4 and 975 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -477,24 +468,24 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7513 -0.4619  0.0799  0.5766  3.1382 
+## -4.7730 -0.4860  0.0971  0.5637  3.1018 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.599e+01  1.219e-01 131.219  < 2e-16 ***
-## TotalSF                 1.285e-03  5.617e-05  22.867  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.074e-04  2.873e-05  14.182  < 2e-16 ***
-## TotalSF:Quality         2.199e-04  4.346e-05   5.058 5.05e-07 ***
-## Quality:NewNeighborhood 2.127e-02  6.890e-03   3.087  0.00208 ** 
+## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
+## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
+## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
+## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.8913 on 976 degrees of freedom
-## Multiple R-squared:  0.8054,	Adjusted R-squared:  0.8046 
-## F-statistic:  1010 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.9048 on 976 degrees of freedom
+## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
+## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
-##Diagonostic Plots
+
 
 
 ```r
