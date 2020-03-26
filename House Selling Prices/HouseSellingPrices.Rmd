@@ -81,7 +81,7 @@ It looks as if the the data here can be transformed. If I run a boxCox on my lm 
 boxCox(sf.lm)
 
 sf1.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df)
-pander(summary(sf1.lm))
+summary(sf1.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = "grey", pch = 16)
 b <- coef(sf1.lm)
@@ -97,7 +97,7 @@ Following this, I then was curious to see if any other column could be used to s
 
 ```{r message = FALSE, warning = FALSE}
 sf2.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew, data = new_df)
-pander(summary(sf2.lm))
+summary(sf2.lm)
 b <- coef(sf2.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = as.factor(NeighborhoodNew), pch = 16)
@@ -108,7 +108,7 @@ curve(b[1] + (b[2] + b[3])*x, col="red", lwd=2, add=TRUE)
 
 ```{r message = FALSE, warning = FALSE}
 sf3.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:Quality, data = new_df)
-pander(summary(sf3.lm))
+summary(sf3.lm)
 b <- coef(sf3.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = as.factor(Quality), pch = 16)
@@ -121,7 +121,7 @@ curve(b[1] + (b[2] + b[3])*x, col="red", lwd=2, add=TRUE)
 ```{r}
 # dropped Quality and NeighborhoodNew
 sf4.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
-pander(summary(sf4.lm))
+summary(sf4.lm)
 b <- coef(sf4.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = interaction(NeighborhoodNew, Quality), pch = 16)
@@ -204,7 +204,7 @@ rsa <- 1 - (n-1)/(n-pt)*SSE/SSTO
 <br>
 
 ```{r}
-pander(b)
+b
 ```
 
 <br>
@@ -224,7 +224,7 @@ I learned a lot from this analysis. There are many factors that influence SalePr
 
 ```{r}
 r.lm <- rlm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
-pander(summary(sf4.lm))
+summary(sf4.lm)
 summary(r.lm)
 
 p.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality, data = my_train[-479,])
@@ -233,8 +233,8 @@ par(mfrow=c(2,2), mai=c(.5,.5,.5,.1))
 plot(p.lm, which=c(1,4))
 plot(r.lm, which=c(1,4))
 
-pander(summary(p.lm))
-pander(summary(sf4.lm))
+summary(p.lm)
+summary(sf4.lm)
 ```
 
 ##Diagonostic Plots
