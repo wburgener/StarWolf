@@ -63,7 +63,7 @@ my_test <- new_df[-keep, ]
 
 ```{r message = FALSE, warning = FALSE}
 sf.lm <- lm(SalePrice ~ TotalSF, data = new_df)
-pander(summary(sf.lm))
+summary(sf.lm)
 
 plot(SalePrice ~ TotalSF, data = new_df, col = "grey", pch = 16)
 b <- coef(sf.lm)
