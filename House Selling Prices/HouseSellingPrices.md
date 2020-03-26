@@ -59,26 +59,29 @@ my_test <- new_df[-keep, ]
 
 ```r
 sf.lm <- lm(SalePrice ~ TotalSF, data = new_df)
-pander(summary(sf.lm))
+summary(sf.lm)
 ```
 
-
----------------------------------------------------------------
-     &nbsp;        Estimate   Std. Error   t value   Pr(>|t|)  
------------------ ---------- ------------ --------- -----------
- **(Intercept)**    -29489       3988      -7.395    2.433e-13 
-
-   **TotalSF**      81.97       1.513       54.17        0     
----------------------------------------------------------------
-
-
--------------------------------------------------------------
- Observations   Residual Std. Error   $R^2$   Adjusted $R^2$ 
--------------- --------------------- ------- ----------------
-     1402              42212          0.677       0.6767     
--------------------------------------------------------------
-
-Table: Fitting linear model: SalePrice ~ TotalSF
+```
+## 
+## Call:
+## lm(formula = SalePrice ~ TotalSF, data = new_df)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -182794  -21275     509   22018  256371 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) -29488.684   3987.889  -7.395 2.43e-13 ***
+## TotalSF         81.972      1.513  54.166  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 42210 on 1400 degrees of freedom
+## Multiple R-squared:  0.677,	Adjusted R-squared:  0.6767 
+## F-statistic:  2934 on 1 and 1400 DF,  p-value: < 2.2e-16
+```
 
 ```r
 plot(SalePrice ~ TotalSF, data = new_df, col = "grey", pch = 16)
@@ -226,22 +229,22 @@ pander(summary(sf4.lm))
 ----------------------------------------------------------------------------
            &nbsp;              Estimate    Std. Error   t value   Pr(>|t|)  
 ----------------------------- ----------- ------------ --------- -----------
-       **(Intercept)**           15.93       0.1217      130.8        0     
+       **(Intercept)**           16.01       0.1227      130.5        0     
 
-         **TotalSF**           0.001319    5.666e-05     23.28    1.108e-95 
+         **TotalSF**           0.001305     5.62e-05     23.22    2.456e-95 
 
- **TotalSF:NeighborhoodNew**   0.0004244    2.86e-05     14.84    4.455e-45 
+ **TotalSF:NeighborhoodNew**   0.0004132   2.835e-05     14.58    1.095e-43 
 
-     **TotalSF:Quality**       0.0001811   4.392e-05     4.122    4.072e-05 
+     **TotalSF:Quality**       0.0001378   4.396e-05     3.134    0.001776  
 
- **Quality:NewNeighborhood**    0.02337     0.006903     3.385    0.0007398 
+ **Quality:NewNeighborhood**    0.03048     0.006881     4.429    1.053e-05 
 ----------------------------------------------------------------------------
 
 
 --------------------------------------------------------------
  Observations   Residual Std. Error   $R^2$    Adjusted $R^2$ 
 -------------- --------------------- -------- ----------------
-     981              0.8896          0.8091       0.8083     
+     981              0.8908          0.8032       0.8024     
 --------------------------------------------------------------
 
 Table: Fitting linear model: sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality
@@ -327,7 +330,7 @@ rsa <- 1 - (n-1)/(n-pt)*SSE/SSTO
 
 | Model   | Adjusted $R^2$ Train Data | Adjusted $R^2$ Test Data |
 |---------|-------|----------------| 
-| Final Model    | 0.8090981  | 0.7962328 |
+| Final Model    | 0.8032307  | 0.8099938 |
 
 <br>
 
@@ -340,7 +343,7 @@ pander(b)
 --------------------------------------------------------------------
  (Intercept)   TotalSF    TotalSF:NeighborhoodNew   TotalSF:Quality 
 ------------- ---------- ------------------------- -----------------
-    15.93      0.001319          0.0004244             0.0001811    
+    16.01      0.001305          0.0004132             0.0001378    
 --------------------------------------------------------------------
 
 Table: Table continues below
@@ -349,7 +352,7 @@ Table: Table continues below
 -------------------------
  Quality:NewNeighborhood 
 -------------------------
-         0.02337         
+         0.03048         
 -------------------------
 
 <br>
@@ -377,22 +380,22 @@ pander(summary(sf4.lm))
 ----------------------------------------------------------------------------
            &nbsp;              Estimate    Std. Error   t value   Pr(>|t|)  
 ----------------------------- ----------- ------------ --------- -----------
-       **(Intercept)**           15.93       0.1217      130.8        0     
+       **(Intercept)**           16.01       0.1227      130.5        0     
 
-         **TotalSF**           0.001319    5.666e-05     23.28    1.108e-95 
+         **TotalSF**           0.001305     5.62e-05     23.22    2.456e-95 
 
- **TotalSF:NeighborhoodNew**   0.0004244    2.86e-05     14.84    4.455e-45 
+ **TotalSF:NeighborhoodNew**   0.0004132   2.835e-05     14.58    1.095e-43 
 
-     **TotalSF:Quality**       0.0001811   4.392e-05     4.122    4.072e-05 
+     **TotalSF:Quality**       0.0001378   4.396e-05     3.134    0.001776  
 
- **Quality:NewNeighborhood**    0.02337     0.006903     3.385    0.0007398 
+ **Quality:NewNeighborhood**    0.03048     0.006881     4.429    1.053e-05 
 ----------------------------------------------------------------------------
 
 
 --------------------------------------------------------------
  Observations   Residual Std. Error   $R^2$    Adjusted $R^2$ 
 -------------- --------------------- -------- ----------------
-     981              0.8896          0.8091       0.8083     
+     981              0.8908          0.8032       0.8024     
 --------------------------------------------------------------
 
 Table: Fitting linear model: sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality
@@ -406,18 +409,18 @@ summary(r.lm)
 ## Call: rlm(formula = sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + 
 ##     TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
 ## Residuals:
-##       Min        1Q    Median        3Q       Max 
-## -4.780517 -0.493729  0.002263  0.500219  3.085486 
+##     Min      1Q  Median      3Q     Max 
+## -4.8061 -0.5172  0.0409  0.5242  3.0472 
 ## 
 ## Coefficients:
 ##                         Value    Std. Error t value 
-## (Intercept)              16.0360   0.1055   151.9652
-## TotalSF                   0.0013   0.0000    26.6588
-## TotalSF:NeighborhoodNew   0.0004   0.0000    16.5582
-## TotalSF:Quality           0.0002   0.0000     4.0870
-## Quality:NewNeighborhood   0.0263   0.0060     4.3867
+## (Intercept)              16.1152   0.1108   145.4696
+## TotalSF                   0.0013   0.0001    25.4077
+## TotalSF:NeighborhoodNew   0.0004   0.0000    15.8229
+## TotalSF:Quality           0.0001   0.0000     3.2931
+## Quality:NewNeighborhood   0.0314   0.0062     5.0498
 ## 
-## Residual standard error: 0.7392 on 976 degrees of freedom
+## Residual standard error: 0.7754 on 976 degrees of freedom
 ```
 
 ```r
@@ -438,22 +441,22 @@ pander(summary(p.lm))
 ----------------------------------------------------------------------------
            &nbsp;              Estimate    Std. Error   t value   Pr(>|t|)  
 ----------------------------- ----------- ------------ --------- -----------
-       **(Intercept)**           15.92       0.1218      130.8        0     
+       **(Intercept)**           16.01       0.1227      130.5        0     
 
-         **TotalSF**           0.001319    5.669e-05     23.27    1.361e-95 
+         **TotalSF**           0.001305     5.62e-05     23.21    3.037e-95 
 
- **TotalSF:NeighborhoodNew**   0.0004242   2.864e-05     14.81    6.641e-45 
+ **TotalSF:NeighborhoodNew**   0.000413    2.835e-05     14.57    1.214e-43 
 
-     **TotalSF:Quality**       0.0001813   4.396e-05     4.123    4.05e-05  
+     **TotalSF:Quality**       0.0001373   4.396e-05     3.124    0.001837  
 
- **Quality:NewNeighborhood**    0.02337     0.006907     3.384    0.0007436 
+ **Quality:NewNeighborhood**    0.03044     0.006881     4.424    1.077e-05 
 ----------------------------------------------------------------------------
 
 
 --------------------------------------------------------------
  Observations   Residual Std. Error   $R^2$    Adjusted $R^2$ 
 -------------- --------------------- -------- ----------------
-     980              0.8901          0.8091       0.8083     
+     980              0.8909          0.8027       0.8019     
 --------------------------------------------------------------
 
 Table: Fitting linear model: sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality
@@ -466,22 +469,22 @@ pander(summary(sf4.lm))
 ----------------------------------------------------------------------------
            &nbsp;              Estimate    Std. Error   t value   Pr(>|t|)  
 ----------------------------- ----------- ------------ --------- -----------
-       **(Intercept)**           15.93       0.1217      130.8        0     
+       **(Intercept)**           16.01       0.1227      130.5        0     
 
-         **TotalSF**           0.001319    5.666e-05     23.28    1.108e-95 
+         **TotalSF**           0.001305     5.62e-05     23.22    2.456e-95 
 
- **TotalSF:NeighborhoodNew**   0.0004244    2.86e-05     14.84    4.455e-45 
+ **TotalSF:NeighborhoodNew**   0.0004132   2.835e-05     14.58    1.095e-43 
 
-     **TotalSF:Quality**       0.0001811   4.392e-05     4.122    4.072e-05 
+     **TotalSF:Quality**       0.0001378   4.396e-05     3.134    0.001776  
 
- **Quality:NewNeighborhood**    0.02337     0.006903     3.385    0.0007398 
+ **Quality:NewNeighborhood**    0.03048     0.006881     4.429    1.053e-05 
 ----------------------------------------------------------------------------
 
 
 --------------------------------------------------------------
  Observations   Residual Std. Error   $R^2$    Adjusted $R^2$ 
 -------------- --------------------- -------- ----------------
-     981              0.8896          0.8091       0.8083     
+     981              0.8908          0.8032       0.8024     
 --------------------------------------------------------------
 
 Table: Fitting linear model: sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality
