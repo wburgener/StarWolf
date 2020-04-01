@@ -1,5 +1,6 @@
 ---
 title: "Baseball Contract Evaluation"
+class: "Personal Project"
 author: "Wesley Burgener"
 date: "12/27/2019"
 output:
@@ -27,7 +28,7 @@ lapply(Packages, library, character.only = TRUE)
 
 
 ```{r}
-df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/baseballdata.csv") %>% 
+df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/BCEdata.csv") %>% 
   filter(ContractCompletedRate == 1)
 
 ggplot(df, aes(x=BreakEvenDollars, y=TotalDollars)) +

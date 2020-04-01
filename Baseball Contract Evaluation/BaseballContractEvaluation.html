@@ -200,7 +200,7 @@ summary {
 <p><br></p>
 <p>This is a personal project that I have began over Christmas break in 2019. I have noticed in baseball that a player that signs a long term contract (usually 6+ years), tends to be inconsistent in performance over the length of that contract. A lot of that can be attributed to either age or injury. I wanted to perform an analysis that looks at a player’s performance based on the amount of money he is getting paid. I took the WAR estimate dollar amount of a player during each year of that contract and compared that dollar amount to the amount being paid to that player during the duration of that contract. I then created a simple linear regression model based heavily on the age of the player when a contract is signed and the length to estimate the performance of that player in millions of dollars. This project is far from finished, but was a fun way to dive into data during the Christmas holiday.</p>
 <p><br></p>
-<pre class="r"><code>df &lt;- read.csv(file = &quot;/Users/wes/Documents/StarWolf/Data/baseballdata.csv&quot;) %&gt;% 
+<pre class="r"><code>df &lt;- read.csv(file = &quot;/Users/wes/Documents/StarWolf/Data/BCEdata.csv&quot;) %&gt;% 
   filter(ContractCompletedRate == 1)
 
 ggplot(df, aes(x=BreakEvenDollars, y=TotalDollars)) +

@@ -1,10 +1,13 @@
 ---
 title: "House Selling Prices"
-author: "Wesley Burgener"
-date: "11/23/2019"
+class: "Math 425 - Linear Regression"
+author: "Wes Burgener"
+date: "Novemeber 18th, 2019"
 output:
   html_document:  
     keep_md: true
+    toc: true
+    toc_float: true
     code_folding: hide
     fig_height: 6
     fig_width: 12
@@ -18,6 +21,10 @@ knitr::opts_chunk$set(echo = TRUE)
 Packages <- c("mosaic", "dplyr", "ggplot2", "pander", "car", "MASS")
 lapply(Packages, library, character.only = TRUE)
 ```
+
+<br>
+
+##Background & Analysis
 
 <br>
 
@@ -92,6 +99,7 @@ Following this, I then was curious to see if any other column could be used to s
 ```{r message = FALSE, warning = FALSE}
 sf2.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew, data = new_df)
 summary(sf2.lm)
+#pander(summary(sf2.lm))
 b <- coef(sf2.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = as.factor(NeighborhoodNew), pch = 16)
@@ -103,6 +111,7 @@ curve(b[1] + (b[2] + b[3])*x, col="red", lwd=2, add=TRUE)
 ```{r message = FALSE, warning = FALSE}
 sf3.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:Quality, data = new_df)
 summary(sf3.lm)
+#pander(summary(sf3.lm))
 b <- coef(sf3.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = as.factor(Quality), pch = 16)
@@ -116,6 +125,7 @@ curve(b[1] + (b[2] + b[3])*x, col="red", lwd=2, add=TRUE)
 # dropped Quality and NeighborhoodNew
 sf4.lm <- lm(sqrt(sqrt(SalePrice)) ~ TotalSF + TotalSF:NeighborhoodNew + TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
 summary(sf4.lm)
+#pander(summary(sf4.lm))
 b <- coef(sf4.lm)
 
 plot(sqrt(sqrt(SalePrice)) ~ TotalSF, data = new_df, col = interaction(NeighborhoodNew, Quality), pch = 16)
@@ -157,6 +167,9 @@ curve(b[1] +
         add = TRUE, 
         col = ColBothOn)
 ```
+
+
+##Model Validation & Interpretation
 
 <br>
 
@@ -228,7 +241,7 @@ summary(p.lm)
 summary(sf4.lm)
 ```
 
-
+##Diagonostic Plots
 
 ```{r}
 par(mfrow=c(1,3))

@@ -1,5 +1,6 @@
 ---
 title: "Baseball Contract Evaluation"
+class: "Personal Project"
 author: "Wesley Burgener"
 date: "12/27/2019"
 output:
@@ -22,7 +23,7 @@ This is a personal project that I have began over Christmas break in 2019. I hav
 
 
 ```r
-df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/baseballdata.csv") %>% 
+df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/BCEdata.csv") %>% 
   filter(ContractCompletedRate == 1)
 
 ggplot(df, aes(x=BreakEvenDollars, y=TotalDollars)) +
@@ -31,7 +32,7 @@ ggplot(df, aes(x=BreakEvenDollars, y=TotalDollars)) +
   geom_text(label=df$Name, cex = 2.5, nudge_y = -3)
 ```
 
-![](Baseball-Contract-Evaluation_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](BaseballContractEvaluation_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
 mylm <- lm(ProfitDollars ~ TotalDollars + AgeAtContract, df)
