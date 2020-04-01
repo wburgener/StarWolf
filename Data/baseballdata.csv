@@ -1,0 +1,48 @@
+Name,Team,Years,Salary,Position,Position1,AgeAtContract,ToDate,ContractStatus,Dollars1,WAR1,Dollars2,WAR2,Dollars3,WAR3,Dollars4,WAR4,Dollars5,WAR5,Dollars6,WAR6,Dollars7,WAR7,Dollars8,WAR8,Dollars9,WAR9,Dollars10,WAR10,TotalDollars,TotalWar,ContractCompletedRate,BreakEvenDollars,ProfitDollars
+Mike Trout,Los Angeles Angels,12,430000000,Batter,OF,27,1,Current Contract,69.2,8.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69.2,8.6,0.083,35.8,33.4
+Bryce Harper,Philadelphia Phillies,13,330000000,Batter,OF,26,1,Current Contract,36.5,4.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36.5,4.6,0.077,25.4,11.1
+Giancarlo Stanton,Miami Marlins,13,325000000,Batter,OF,25,5,Current Contract,27.9,3.5,17.2,2.2,58.2,7.3,34.7,4.3,2.9,0.4,0,0,0,0,0,0,0,0,0,0,140.9,17.7,0.385,125,15.9
+Manny Machado,San Diego Padres,10,300000000,Batter,3B,26,1,Current Contract,24.6,3.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24.6,3.1,0.1,30,-5.4
+Alex Rodriguez,New York Yankees,10,275000000,Batter,3B,32,10,Expired Contract,36.3,5.8,26.1,4.1,23.9,4,30.7,4,16.2,2.5,4.6,0.6,0,0,21.5,2.7,-9,-1.1,0,0,150.3,22.6,1,275,-124.7
+Nolan Arenado,Colorado Rockies,8,260000000,Batter,3B,27,1,Current Contract,47.4,5.9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47.4,5.9,0.125,32.5,14.9
+Alex Rodriguez,Texas Rangers,7,176400000,Batter,3B,25,7,Expired Contract,27,7.8,39.2,10,39.4,9.2,27.7,6.6,42.7,9.1,18.4,3.8,53.6,9.6,0,0,0,0,0,0,248,56.1,1,176.4,71.6
+Miguel Cabrera,Detroit Tigers,8,247000000,Batter,1B,31,4,Current Contract,38.7,4.8,-1.3,-0.2,5.8,0.7,-2.7,-0.3,0,0,0,0,0,0,0,0,0,0,0,0,40.5,5,0.5,123.5,-83
+Robinson Cano,Seattle Mariners,10,240000000,Batter,2B,32,6,Current Contract,42.6,5.6,22.2,2.8,50.5,6.3,24.6,3.1,23.2,2.9,6.1,0.8,0,0,0,0,0,0,0,0,169.2,21.5,0.6,144,25.2
+Albert Pujols,Los Angeles Angels,10,240000000,Batter,1B,32,8,Current Contract,21.6,3.3,3.8,0.5,20.8,2.7,13,1.6,6.3,0.8,-15.8,-2,-1.7,-0.2,-3,-0.4,0,0,0,0,45,6.3,0.8,192,-147
+Joey Votto,Cincinnati Reds,10,225000000,Batter,1B,29,6,Current Contract,6.1,0.8,58,7.3,41.5,5.2,51.8,6.5,27.8,3.5,5.4,0.7,0,0,0,0,0,0,0,0,190.6,24,0.6,135,55.6
+David Price,Boston Red Sox,7,217000000,Pitcher,P,30,4,Current Contract,35.2,4.4,11.7,1.5,19.3,2.4,18.8,2.3,0,0,0,0,0,0,0,0,0,0,0,0,85,10.6,0.571,124,-39
+Clayton Kershaw,Los Angeles Dodgers,8,243000000,Pitcher,P,26,6,Current Contract,60.4,7.9,68.4,8.6,50.8,6.3,34.8,4.3,26.5,3.3,27.2,3.4,0,0,0,0,0,0,0,0,268.1,33.8,0.75,182.3,85.9
+Prince Fielder,Detroit Tigers,9,214000000,Batter,1B,28,8,Current Contract,32.7,5,19.8,2.7,-3.2,-0.4,16,2,-14.6,-1.8,0,0,0,0,0,0,0,0,0,0,50.7,7.5,0.889,190.2,-139.5
+Max Scherzer,Washington Nationals,7,210000000,Pitcher,P,31,5,Current Contract,52.1,6.5,45,5.6,51.5,6.4,60.1,7.5,52.2,6.5,0,0,0,0,0,0,0,0,0,0,260.9,32.5,0.714,150,110.9
+Derek Jeter,New York Yankees,10,189000000,Batter,SS,27,10,Expired Contract,14,4.2,20.4,5.2,17.7,4.1,19.8,4.7,20.6,4.4,29.4,6.1,20.3,3.6,21,3.4,42.9,6.7,14,2.3,220.1,44.7,1,189,31.1
+Joe Mauer,Minnesota Twins,8,184000000,Batter,1B,27,8,Expired Contract,16.2,2.1,29.8,4.6,38.3,5.2,12.6,1.7,2.6,0.3,8.3,1,18.5,2.3,8.4,1.1,0,0,0,0,134.7,18.3,1,184,-49.3
+Jason Heyward,Chicago Cubs,8,184000000,Batter,OF,26,4,Current Contract,7.7,1,8.5,1.1,16.4,2,15.5,1.9,0,0,0,0,0,0,0,0,0,0,0,0,48.1,6,0.5,92,-43.9
+Mark Teixeira,New York Yankees,8,180000000,Batter,1B,29,8,Expired Contract,33.1,5.2,20.9,3.5,32.9,4.3,17.3,2.7,-1,-0.1,5.3,0.7,23,2.9,-8,-1,0,0,0,0,123.5,18.2,1,180,-56.5
+Justin Verlander,Detroit Tigers,7,180000000,Pitcher,P,30,6,Current Contract,24.2,3.2,25.1,3.1,42.9,5.4,33.2,4.1,53.1,6.6,50.9,6.4,0,0,0,0,0,0,0,0,229.4,28.8,0.857,154.3,75.1
+Felix Hernandez,Seattle Mariners,7,175000000,Pitcher,P,27,7,Expired Contract,45,6.1,42.9,5.6,21.3,2.7,8.9,1.1,2.8,0.3,1.5,0.2,-1,-0.1,0,0,0,0,0,0,121.4,15.9,1,175,-53.6
+Buster Posey,San Francisco Giants,8,167000000,Batter,C,26,7,Current Contract,51.4,6.9,57.8,7.6,54.2,6.8,53.9,6.7,37.9,4.7,18.4,2.3,14.7,1.8,0,0,0,0,0,0,288.3,36.8,0.875,146.1,142.2
+CC Sabathia,New York Yankees,7,161000000,Pitcher,P,29,7,Expired Contract,37.3,5.8,33,5.5,43.8,5.8,26.8,4.1,15.9,2.1,0.3,0,9.6,1.2,0,0,0,0,0,0,166.7,24.5,1,161,5.7
+Chris Davis,Baltimore Orioles,7,161000000,Batter,1B,30,4,Current Contract,23.1,2.9,0.1,0,-25.5,-3.2,-10.6,-1.3,0,0,0,0,0,0,0,0,0,0,0,0,-12.9,-1.6,0.571,92,-104.9
+Matt Kemp,Los Angeles Dodgers,8,160000000,Batter,OF,27,8,Expired Contract,24.7,3.8,7.6,1,19.1,2.5,7.9,1,6.4,0.8,-4.9,-0.6,13.1,1.6,-6.4,-0.8,0,0,0,0,67.5,9.3,1,160,-92.5
+Manny Ramirez,Boston Red Sox,8,160000000,Batter,OF,29,8,Expired Contract,20,5.2,25.1,5.8,13.8,3.3,13.7,2.9,13.9,2.9,6.7,1.2,36.4,5.9,0,0,0,0,0,0,129.6,27.2,1,160,-30.4
+Troy Tulowitzki,Colorado Rockies,10,157750000,Batter,SS,27,9,Current Contract,33.1,5.5,41,5.4,8.6,1.3,36.4,4.9,38.9,5.1,19.4,2.4,24,3,0.5,0.1,0.3,0,0,0,202.2,27.7,0.9,142,60.2
+Masahiro Tanaka,New York Yankees,7,155000000,Pitcher,P,26,6,Current Contract,22.1,2.9,18.2,2.3,37.5,4.7,20.8,2.6,19.2,2.4,26.1,3.3,0,0,0,0,0,0,0,0,143.9,18.2,0.857,132.9,11
+Adrian Gonzalez,Boston Red Sox,7,154000000,Batter,1B,29,7,Expired Contract,19.8,3,17.4,2.4,27.9,3.7,23.7,3,10,1.3,-8.1,-1,-2.3,-0.3,0,0,0,0,0,0,88.4,12.1,1,154,-65.6
+Jacoby Ellsbury,New York Yankees,7,153000000,Batter,OF,30,6,Current Contract,27,3.6,8.7,1.1,14.3,1.8,13,1.6,0,0,0,0,0,0,0,0,0,0,0,0,63,8.1,0.857,131.1,-68.1
+Miguel Cabrera,Detroit Tigers,8,152300000,Batter,1B,25,8,Expired Contract,16.3,2.6,32.3,5.1,36.4,6.1,50,6.6,47.4,63.7,8.6,39.4,5.2,36.6,4.6,0,0,0,0,0,200.8,160.1,1,152.3,48.5
+Todd Helton,Colorado Rockies,9,141500000,Batter,1B,30,9,Expired Contract,28.3,6.6,29.5,7,19.1,4.1,9.3,1.9,23.4,4.2,3.6,0.6,16.7,2.6,-3.2,-0.5,17.5,2.3,0,0,144.2,28.8,1,141.5,2.7
+Carl Crawford,Boston Red Sox,7,142000000,Batter,OF,29,7,Expired Contract,-0.2,0,2.1,0.3,16.4,2.2,18.4,2.4,2.8,0.4,-5.9,-0.7,0,0,0,0,0,0,0,0,33.6,4.6,1,142,-108.4
+David Wright,New York Mets,7,138000000,Batter,3B,30,7,Expired Contract,41.5,5.6,12.4,1.6,8.2,1,5.5,0.7,0,0,0,0,0,0,0,0,0,0,0,0,67.6,8.9,1,138,-70.4
+Johan Santana,New York Mets,6,137500000,Pitcher,P,29,6,Expired Contract,22.3,3.5,22,3.7,10,1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54.3,8.7,1,137.5,-83.2
+Alfonso Soriano,Chicago Cubs,8,136000000,Batter,OF,29,8,Expired Contract,37.3,6.7,23.7,3.8,-0.8,-0.1,16,2.7,8,1,20.7,3.2,19.4,2.6,-7,-0.9,0,0,0,0,117.3,19,1,136,-18.7
+Freddie Freeman,Atlanta Braves,8,135000000,Batter,3B,24,6,Current Contract,33.8,4.4,26.4,3.3,48.9,6.1,35.1,4.4,42.1,5.3,32,4,0,0,0,0,0,0,0,0,218.3,27.5,0.75,101.3,117.1
+Shin-Soo Choo,Texas Rangers,7,130000000,Batter,OF,32,6,Current Contract,3,0.4,27.4,3.4,5,0.6,3.6,0.5,18.1,2.3,14,1.7,0,0,0,0,0,0,0,0,71.1,8.9,0.857,111.4,-40.3
+Vernon Wells,Toronto Blue Jays,7,126000000,Batter,OF,28,7,Expired Contract,10.1,1.8,6.1,1,-0.4,-0.1,22.1,3.7,3,0.4,1.2,0.2,-2.4,-0.3,0,0,0,0,0,0,39.7,6.7,1,126,-86.3
+Barry Zito,San Francisco Giants,7,126000000,Pitcher,P,29,7,Expired Contract,8.8,1.6,8,1.3,13.2,2.1,10.6,1.8,-4.7,-0.6,6.5,1,-4.9,-0.7,0,0,0,0,0,0,37.5,6.5,1,126,-88.5
+Jayson Werth,Washington Nationals,7,126000000,Batter,OF,32,7,Expired Contract,16.9,2.2,8.9,1.4,32.5,4.4,40,5.3,-1,-0.1,10.1,1.3,-2.4,-0.3,0,0,0,0,0,0,105,14.2,1,126,-21
+Mike Hampton,Colorado Rockies,8,121000000,Pitcher,P,28,8,Expired Contract,7.1,1.9,1.3,0.3,11,2.6,8,1.9,4.6,1,0,0,0,0,1.3,0.2,0,0,0,0,33.3,7.9,1,121,-87.7
+Jason Giambi,New York Yankees,7,120000000,Batter,1B,31,7,Expired Contract,25.6,6.6,21.4,5,0.2,0,19.7,4.2,14.4,3,3.6,0.7,15,2.4,0,0,0,0,0,0,99.9,21.9,1,120,-20.1
+Elvis Andrus,Texas Rangers,8,120000000,Batter,SS,26,5,Current Contract,14.7,1.8,18.7,2.3,31.5,3.9,9.3,1.2,11.6,1.4,0,0,0,0,0,0,0,0,0,0,85.8,10.6,0.625,75,10.8
+Matt Holliday,St. Louis Cardinals,7,120000000,Batter,1B,30,7,Expired Contract,37.1,6.2,33.5,4.4,30,4.6,29.3,4,24.3,3.2,7.1,0.9,6.4,0.8,0,0,0,0,0,0,167.7,24.1,1,120,47.7
+Carlos Beltran,New York Mets,7,119000000,Batter,OF,28,7,Expired Contract,10.9,2.3,37.6,7.8,28.5,5.1,44.9,7.2,18.4,2.9,4.3,0.7,32.6,4.3,0,0,0,0,0,0,177.2,30.3,1,119,58.2
+"Ken Griffey, Jr.",Cincinnati Reds,9,116500000,Batter,OF,30,9,Expired Contract,22.4,5.4,7.5,1.8,0.9,0.2,6.6,1.5,-0.6,-0.2,13.8,2.9,-2.8,-0.6,-3.3,-0.6,-2.9,-0.5,0,0,41.6,9.9,1,116.5,-74.9

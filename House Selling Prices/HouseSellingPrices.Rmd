@@ -30,8 +30,8 @@ I began thinking about what matters to people when they buy a home. I thought of
 <br>
 
 ```{r message = FALSE, warning = FALSE}
-df <- read.csv(file = "HSPtrain.csv")
-df_1 <- read.csv(file = "HSPtest.csv")
+df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/HSPtrain.csv")
+df_1 <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/HSPtest.csv")
 
 new_df <- df %>% 
   mutate(NewNeighborhood = as.numeric(as.factor(unlist(df[[13]])))) %>% 

@@ -25,8 +25,8 @@ I began thinking about what matters to people when they buy a home. I thought of
 
 
 ```r
-df <- read.csv(file = "HSPtrain.csv")
-df_1 <- read.csv(file = "HSPtest.csv")
+df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/HSPtrain.csv")
+df_1 <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/HSPtest.csv")
 
 new_df <- df %>% 
   mutate(NewNeighborhood = as.numeric(as.factor(unlist(df[[13]])))) %>% 
@@ -236,21 +236,21 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7730 -0.4860  0.0971  0.5637  3.1018 
+## -4.7875 -0.4734  0.0686  0.5698  3.1919 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
-## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
-## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
-## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
+## (Intercept)             1.614e+01  1.205e-01 133.861  < 2e-16 ***
+## TotalSF                 1.232e-03  5.592e-05  22.035  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.271e-04  2.940e-05  14.531  < 2e-16 ***
+## TotalSF:Quality         1.639e-04  4.396e-05   3.728 0.000204 ***
+## Quality:NewNeighborhood 2.937e-02  6.704e-03   4.381 1.31e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.9048 on 976 degrees of freedom
-## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
-## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.8857 on 976 degrees of freedom
+## Multiple R-squared:  0.8145,	Adjusted R-squared:  0.8137 
+## F-statistic:  1071 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -331,7 +331,7 @@ rsa <- 1 - (n-1)/(n-pt)*SSE/SSTO
 
 | Model   | Adjusted $R^2$ Train Data | Adjusted $R^2$ Test Data |
 |---------|-------|----------------| 
-| Final Model    | 0.7982108  | 0.8232777 |
+| Final Model    | 0.8144689  | 0.77524 |
 
 <br>
 
@@ -342,9 +342,9 @@ b
 
 ```
 ##             (Intercept)                 TotalSF TotalSF:NeighborhoodNew 
-##            1.594836e+01            1.314863e-03            4.303953e-04 
+##            1.613674e+01            1.232098e-03            4.271354e-04 
 ##         TotalSF:Quality Quality:NewNeighborhood 
-##            1.717048e-04            2.415739e-02
+##            1.638934e-04            2.937178e-02
 ```
 
 <br>
@@ -376,21 +376,21 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7730 -0.4860  0.0971  0.5637  3.1018 
+## -4.7875 -0.4734  0.0686  0.5698  3.1919 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
-## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
-## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
-## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
+## (Intercept)             1.614e+01  1.205e-01 133.861  < 2e-16 ***
+## TotalSF                 1.232e-03  5.592e-05  22.035  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.271e-04  2.940e-05  14.531  < 2e-16 ***
+## TotalSF:Quality         1.639e-04  4.396e-05   3.728 0.000204 ***
+## Quality:NewNeighborhood 2.937e-02  6.704e-03   4.381 1.31e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.9048 on 976 degrees of freedom
-## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
-## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.8857 on 976 degrees of freedom
+## Multiple R-squared:  0.8145,	Adjusted R-squared:  0.8137 
+## F-statistic:  1071 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -403,17 +403,17 @@ summary(r.lm)
 ##     TotalSF:Quality + NewNeighborhood:Quality, data = my_train)
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -4.78254 -0.52401  0.03899  0.50553  3.09110 
+## -4.79930 -0.50243  0.02958  0.52487  3.13514 
 ## 
 ## Coefficients:
 ##                         Value    Std. Error t value 
-## (Intercept)              16.0986   0.1127   142.8078
-## TotalSF                   0.0013   0.0001    24.5649
-## TotalSF:NeighborhoodNew   0.0004   0.0000    16.3812
-## TotalSF:Quality           0.0002   0.0000     3.9856
-## Quality:NewNeighborhood   0.0248   0.0062     3.9784
+## (Intercept)              16.2127   0.1084   149.5775
+## TotalSF                   0.0012   0.0001    24.3747
+## TotalSF:NeighborhoodNew   0.0004   0.0000    16.0318
+## TotalSF:Quality           0.0002   0.0000     3.9533
+## Quality:NewNeighborhood   0.0285   0.0060     4.7284
 ## 
-## Residual standard error: 0.7575 on 976 degrees of freedom
+## Residual standard error: 0.7673 on 976 degrees of freedom
 ```
 
 ```r
@@ -439,21 +439,21 @@ summary(p.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7710 -0.4848  0.0983  0.5639  3.1047 
+## -4.7872 -0.4688  0.0689  0.5683  3.1883 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.595e+01  1.273e-01 125.251  < 2e-16 ***
-## TotalSF                 1.315e-03  5.906e-05  22.260  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.303e-04  2.881e-05  14.937  < 2e-16 ***
-## TotalSF:Quality         1.723e-04  4.547e-05   3.790 0.000160 ***
-## Quality:NewNeighborhood 2.396e-02  7.063e-03   3.392 0.000722 ***
+## (Intercept)             1.614e+01  1.205e-01 133.862  < 2e-16 ***
+## TotalSF                 1.234e-03  5.593e-05  22.060  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.261e-04  2.940e-05  14.492  < 2e-16 ***
+## TotalSF:Quality         1.635e-04  4.395e-05   3.720 0.000211 ***
+## Quality:NewNeighborhood 2.938e-02  6.703e-03   4.383  1.3e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.9052 on 975 degrees of freedom
-## Multiple R-squared:  0.7979,	Adjusted R-squared:  0.797 
-## F-statistic: 962.1 on 4 and 975 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.8855 on 975 degrees of freedom
+## Multiple R-squared:  0.8145,	Adjusted R-squared:  0.8137 
+## F-statistic:  1070 on 4 and 975 DF,  p-value: < 2.2e-16
 ```
 
 ```r
@@ -468,21 +468,21 @@ summary(sf4.lm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -4.7730 -0.4860  0.0971  0.5637  3.1018 
+## -4.7875 -0.4734  0.0686  0.5698  3.1919 
 ## 
 ## Coefficients:
 ##                          Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)             1.595e+01  1.273e-01 125.302  < 2e-16 ***
-## TotalSF                 1.315e-03  5.904e-05  22.272  < 2e-16 ***
-## TotalSF:NeighborhoodNew 4.304e-04  2.879e-05  14.948  < 2e-16 ***
-## TotalSF:Quality         1.717e-04  4.543e-05   3.779 0.000167 ***
-## Quality:NewNeighborhood 2.416e-02  7.048e-03   3.428 0.000634 ***
+## (Intercept)             1.614e+01  1.205e-01 133.861  < 2e-16 ***
+## TotalSF                 1.232e-03  5.592e-05  22.035  < 2e-16 ***
+## TotalSF:NeighborhoodNew 4.271e-04  2.940e-05  14.531  < 2e-16 ***
+## TotalSF:Quality         1.639e-04  4.396e-05   3.728 0.000204 ***
+## Quality:NewNeighborhood 2.937e-02  6.704e-03   4.381 1.31e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.9048 on 976 degrees of freedom
-## Multiple R-squared:  0.7982,	Adjusted R-squared:  0.7974 
-## F-statistic: 965.2 on 4 and 976 DF,  p-value: < 2.2e-16
+## Residual standard error: 0.8857 on 976 degrees of freedom
+## Multiple R-squared:  0.8145,	Adjusted R-squared:  0.8137 
+## F-statistic:  1071 on 4 and 976 DF,  p-value: < 2.2e-16
 ```
 
 

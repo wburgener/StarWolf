@@ -1,0 +1,43 @@
+---
+title: "Baseball Contract Evaluation"
+author: "Wesley Burgener"
+date: "12/27/2019"
+output:
+  html_document:  
+    keep_md: true
+    code_folding: hide
+    fig_height: 6
+    fig_width: 12
+    fig_align: 'center'
+---
+
+<br>
+
+This is a personal project that I have began over Christmas break in 2019. I have noticed in baseball that a player that signs a long term contract (usually 6+ years), tends to be inconsistent in performance over the length of that contract. A lot of that can be attributed to either age or injury. I wanted to perform an analysis that looks at a player's performance based on the amount of money he is getting paid. I took the WAR estimate dollar amount of a player during each year of that contract and compared that dollar amount to the amount being paid to that player during the duration of that contract. I then created a simple linear regression model based heavily on the age of the player when a contract is signed and the length to estimate the performance of that player in millions of dollars. This project is far from finished, but was a fun way to dive into data during the Christmas holiday.
+
+<br>
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#installing packages
+Packages <- c("mosaic", "dplyr", "ggplot2", "pander", "car", "MASS")
+lapply(Packages, library, character.only = TRUE)
+```
+
+
+```{r}
+df <- read.csv(file = "/Users/wes/Documents/StarWolf/Data/baseballdata.csv") %>% 
+  filter(ContractCompletedRate == 1)
+
+ggplot(df, aes(x=BreakEvenDollars, y=TotalDollars)) +
+  geom_point(aes(col = Position1)) +
+  geom_abline(slope = 1, intercept = 1, color = "blue") +
+  geom_text(label=df$Name, cex = 2.5, nudge_y = -3)
+
+mylm <- lm(ProfitDollars ~ TotalDollars + AgeAtContract, df)
+summary(mylm)
+
+predict(mylm, data.frame(TotalDollars = 425, AgeAtContract = 30), type = "response")
+```
+
